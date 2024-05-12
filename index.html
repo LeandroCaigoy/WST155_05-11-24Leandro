@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fuggles&display=swap" rel="stylesheet">
+
+  
+    <title>WST155 - 05/11/24</title>
+    <style>
+      #member {
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #door {
+        width: 120px;
+        height: 60px;
+        background-color: rgb(33, 47, 60) ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button {
+        padding: 10px 30px;
+        background-color: rgb(180, 27, 21);
+        border: none;
+        margin: 5px;
+        font-size: medium;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(255, 140, 9);
+      }
+      form {
+        padding: 30px;
+      }
+      input {
+        display: block;
+        padding: 10px;
+        margin: 20px;
+        font-size: medium;
+      }
+      body {
+        background-image: url('./images/meSkull.jpg');
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        text-align: center;
+        font-family: "Fuggles", cursive;
+        font-size: 190%;
+      }
+   
+    </style>
+
+  </head>
+  <body>
+  
+    <center> <h1>MEMBERS ONLY</h1> </center>
+    <center> <h4>WST155 - 05/11/24</h4> </center>
+    
+  </body>
+
+
+    <div id="member">
+      <form>
+        <input id="pcode" type="text" placeholder="Age" />
+      </form>
+
+      <div id="door">
+        <button id="enterButton" onclick="tryToEnter()">Submit</button>
+      </div>
+    </div>
+
+    <script>
+      
+      let pcode;
+     
+      function tryToEnter() 
+      {
+        pcode = document.getElementById("pcode").value;
+    
+        if (pcode >= 21) {
+          window.location = 'main.html';
+        } else {
+          window.location = 'stop.html';
+        }
+      }
+
+     
+        
+    </script>
+  </body>
+</html>
